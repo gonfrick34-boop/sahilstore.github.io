@@ -1,43 +1,77 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>STK Store</title>
+  <title>Sahil Store</title>
   <style>
     body {
       font-family: Arial;
       text-align: center;
       background-color: #f2f2f2;
     }
+
+    h1 {
+      background: black;
+      color: white;
+      padding: 15px;
+    }
+
     .product {
       background: white;
       padding: 20px;
       margin: 20px;
       border-radius: 10px;
+      display: inline-block;
+      width: 250px;
     }
+
+    img {
+      border-radius: 10px;
+    }
+
     button {
       padding: 10px 20px;
       background: green;
       color: white;
       border: none;
       border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: darkgreen;
     }
   </style>
 </head>
 <body>
 
-  <h1>Welcome to STK 🛒</h1>
+<h1>Welcome to Sahil Store 🛒</h1>
 
-  <div class="product">
-    <h2>Product Name</h2>
-    <p>₹499</p>
-    <button onclick="orderNow()">Order on WhatsApp</button>
-  </div>
+<div class="product">
+  <h2>T-Shirt</h2>
+  <img src="https://via.placeholder.com/200" width="200">
+  <p>₹499</p>
+  <button onclick="orderNow('T-Shirt')">Order on WhatsApp</button>
+</div>
 
-  <script>
-    function orderNow() {
-      window.location.href = "https://wa.me/8413007500";
-    }
-  </script>
+<div class="product">
+  <h2>Shoes</h2>
+  <img src="https://via.placeholder.com/200" width="200">
+  <p>₹999</p>
+  <button onclick="orderNow('Shoes')">Order on WhatsApp</button>
+</div>
+
+<div class="product">
+  <h2>Watch</h2>
+  <img src="https://via.placeholder.com/200" width="200">
+  <p>₹1499</p>
+  <button onclick="orderNow('Watch')">Order on WhatsApp</button>
+</div>
+
+<script>
+  function orderNow(product) {
+    window.location.href = "https://wa.me/91YOURNUMBER?text=I want to order " + product;
+  }
+</script>
 
 </body>
 </html>
